@@ -1,0 +1,213 @@
+.header {
+    width: 100%;
+    height: 90px;
+    background-color: #263b5c;
+    position: sticky;
+    top: 0px;
+    display: flex;
+    @include flex(space-between, center);
+
+    .logo {
+        width: 20%;
+        height: 60px;
+        @extend %flex;
+        background-repeat: no-repeat;
+        background-size: cover;
+        margin-left: 2%;
+    }
+
+    .menu {
+        display: flex;
+        @include flex(center, center);
+        width: 50%;
+gap:10px;
+        .menuicon {
+            font-size: 25px;
+            position: relative;
+            display: none;
+            &:hover +.littlemenu{
+display:block ;            }
+        }
+       
+
+        .littlemenu {
+            
+            font-size: 20px;
+            position: absolute;
+            
+display: none;
+            ul {
+                @extend %flex;
+                flex-direction: column;
+
+                li {
+                    a {
+                        color: black;
+                        text-decoration: none;
+                        &:hover{
+                            color: aquamarine;
+                        }
+                    }
+                }
+            }
+        }
+        .bigmenu{
+            font-size: 20px;
+          
+            ul {
+                @extend %flex;
+                gap:10px;
+                li {
+                    a {
+                        color: black;
+                        text-decoration: none;
+
+                        &:hover{
+                            color: aquamarine;
+                        }
+                    }
+                }
+            }
+        }
+    }
+    .makedonation{
+        gap:10px;
+        width:30%;
+        @extend %flex;
+        p{
+            color: aliceblue;
+            span{
+                text-decoration: underline;
+            }
+        }
+        .donation{
+            width:150px;
+height: 40px;
+border:2px solid red;
+background-color: red;
+@extend %flex;
+color: white;
+&:hover{
+    background-color:  #263b5c;
+    border:2px solid white;
+
+}
+        }
+    }
+}
+@media screen and (max-width:1200px) {
+   .header{
+    .logo{
+        width:30%;
+    }
+    .menu{
+        .bigmenu{
+            font-size: 15px;
+        }
+       
+
+    }
+    .makedonation{
+        p{font-size: 13px;}
+       width: 40%;
+       
+    }
+   } 
+}
+@media screen and (max-width:1000px) {
+    .header{
+     .logo{
+         width:30%;
+     }
+     .menu{
+         .bigmenu{
+             font-size: 15px;
+         }
+        
+ 
+     }
+     .makedonation{
+        width: 40%;
+        font-size: 15px;
+     }
+    } 
+ }
+ @media screen and (max-width:900px) {
+.header{
+    height: 300px;
+    .menu{
+        width: 40%;
+    .menuicon{
+        
+        display: block;
+    }.bigmenu{
+        display:none ;
+
+    }
+    .littlemenu{
+top:60%;
+right: 80%;
+    }
+   
+    
+} .makedonation{
+    width:50%;
+    p{
+        font-size: 10px;
+    }
+}}
+ }
+ @media screen and (max-width:700px) {
+    .header{
+        .logo{
+width:50%
+        }
+        .makedonation{
+            font-size: 10px;
+            width:50%;
+            .donation{
+                width: 120px;
+                height: 30px;
+                font-size: 10px;
+            }
+        }
+    }
+ }
+ @media screen and (max-width:400px){
+    .header{
+        .logo{
+          display:none ;
+        }
+        .menu{.littlemenu{
+           width: 20%;
+margin-left: -60px;
+ul{
+    font-size: 10px;
+}
+        }}
+        
+        .makedonation{
+            p{
+                display: none;
+            }
+        }
+    }
+    
+ }
+ @media screen and (max-width:600px){
+    .header{
+        .logo{
+            width:90%
+        }
+        .menu{.littlemenu{
+font-size: 15px;
+        }}
+        
+        .makedonation{
+            p{
+                display: none;
+            }
+        }
+    }
+    
+ }

@@ -1,0 +1,229 @@
+.header .makedonation .donation, .header .makedonation, .header .menu .bigmenu ul, .header .menu .littlemenu ul, .header .logo {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+  display: block;
+}
+
+body {
+  line-height: 1;
+}
+
+ol, ul {
+  list-style: none;
+}
+
+blockquote, q {
+  quotes: none;
+}
+
+blockquote:before, blockquote:after,
+q:before, q:after {
+  content: "";
+  content: none;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+.header {
+  width: 100%;
+  height: 90px;
+  background-color: #263b5c;
+  position: -webkit-sticky;
+  position: sticky;
+  top: 0px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.header .logo {
+  width: 20%;
+  height: 60px;
+  background-repeat: no-repeat;
+  background-size: cover;
+  margin-left: 2%;
+}
+.header .menu {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 50%;
+  gap: 10px;
+}
+.header .menu .menuicon {
+  font-size: 25px;
+  position: relative;
+  display: none;
+}
+.header .menu .menuicon:hover + .littlemenu {
+  display: block;
+}
+.header .menu .littlemenu {
+  font-size: 20px;
+  position: absolute;
+  display: none;
+}
+.header .menu .littlemenu ul {
+  flex-direction: column;
+}
+.header .menu .littlemenu ul li a {
+  color: black;
+  text-decoration: none;
+}
+.header .menu .littlemenu ul li a:hover {
+  color: aquamarine;
+}
+.header .menu .bigmenu {
+  font-size: 20px;
+}
+.header .menu .bigmenu ul {
+  gap: 10px;
+}
+.header .menu .bigmenu ul li a {
+  color: black;
+  text-decoration: none;
+}
+.header .menu .bigmenu ul li a:hover {
+  color: aquamarine;
+}
+.header .makedonation {
+  gap: 10px;
+  width: 30%;
+}
+.header .makedonation p {
+  color: aliceblue;
+}
+.header .makedonation p span {
+  text-decoration: underline;
+}
+.header .makedonation .donation {
+  width: 150px;
+  height: 40px;
+  border: 2px solid red;
+  background-color: red;
+  color: white;
+}
+.header .makedonation .donation:hover {
+  background-color: #263b5c;
+  border: 2px solid white;
+}
+
+@media screen and (max-width: 1200px) {
+  .header .logo {
+    width: 30%;
+  }
+  .header .menu .bigmenu {
+    font-size: 15px;
+  }
+  .header .makedonation {
+    width: 40%;
+  }
+  .header .makedonation p {
+    font-size: 13px;
+  }
+}
+@media screen and (max-width: 1000px) {
+  .header .logo {
+    width: 30%;
+  }
+  .header .menu .bigmenu {
+    font-size: 15px;
+  }
+  .header .makedonation {
+    width: 40%;
+    font-size: 15px;
+  }
+}
+@media screen and (max-width: 900px) {
+  .header {
+    height: 300px;
+  }
+  .header .menu {
+    width: 40%;
+  }
+  .header .menu .menuicon {
+    display: block;
+  }
+  .header .menu .bigmenu {
+    display: none;
+  }
+  .header .menu .littlemenu {
+    top: 60%;
+    right: 80%;
+  }
+  .header .makedonation {
+    width: 50%;
+  }
+  .header .makedonation p {
+    font-size: 10px;
+  }
+}
+@media screen and (max-width: 700px) {
+  .header .logo {
+    width: 50%;
+  }
+  .header .makedonation {
+    font-size: 10px;
+    width: 50%;
+  }
+  .header .makedonation .donation {
+    width: 120px;
+    height: 30px;
+    font-size: 10px;
+  }
+}
+@media screen and (max-width: 400px) {
+  .header .logo {
+    display: none;
+  }
+  .header .menu .littlemenu {
+    width: 20%;
+    margin-left: -60px;
+  }
+  .header .menu .littlemenu ul {
+    font-size: 10px;
+  }
+  .header .makedonation p {
+    display: none;
+  }
+}
+@media screen and (max-width: 600px) {
+  .header .logo {
+    width: 90%;
+  }
+  .header .menu .littlemenu {
+    font-size: 15px;
+  }
+  .header .makedonation p {
+    display: none;
+  }
+}/*# sourceMappingURL=style.css.map */
